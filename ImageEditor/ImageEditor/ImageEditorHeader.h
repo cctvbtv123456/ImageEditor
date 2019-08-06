@@ -24,6 +24,10 @@
 #define DrawColorToolBarHeight 50*kScale
 
 
+#define LAZY_LOAD(object, assignment) (object = object ?: assignment)
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
+
 /** 字体 */
 #define Font_Bold(font)         [UIFont fontWithName:@"PingFangSC-Medium" size:font]?[UIFont fontWithName:@"PingFangSC-Medium" size:font]:[UIFont systemFontOfSize:font]
 #define Font_Medium(font)       [UIFont fontWithName:@"PingFangSC-Medium" size:font]?[UIFont fontWithName:@"PingFangSC-Regular" size:font]:[UIFont systemFontOfSize:font]
