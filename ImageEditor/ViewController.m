@@ -21,7 +21,7 @@
 }
 
 - (IBAction)click:(UIButton *)sender {
-    UIImage *image = [UIImage imageNamed:@"localImage_01@2x.jpg"];
+    UIImage *image = [UIImage imageNamed:@"localImage_01@2x.jpeg"];
     ImageEditorVC *imageEditorVC = [[ImageEditorVC alloc] initWithImage:image delegate:self dataSource:self];
     [self.navigationController pushViewController:imageEditorVC animated:YES];
 }

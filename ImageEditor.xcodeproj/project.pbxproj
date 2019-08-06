@@ -27,7 +27,7 @@
 		041EE47C22EAE79F00EE9670 /* DrawTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 041EE47B22EAE79F00EE9670 /* DrawTool.m */; };
 		041EE47F22EAEEF600EE9670 /* ColorToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 041EE47E22EAEEF600EE9670 /* ColorToolBar.m */; };
 		04971E0C22F9564D00CC6B1A /* ImageEditorBunder.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 04971E0B22F9564D00CC6B1A /* ImageEditorBunder.bundle */; };
-		049BC2F022F83E6A00C0FE83 /* localImage_01@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 049BC2EF22F83E6A00C0FE83 /* localImage_01@2x.jpg */; };
+		04971E1022F95D5700CC6B1A /* localImage_01@2x.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 04971E0F22F95D5700CC6B1A /* localImage_01@2x.jpeg */; };
 		767BD2EF1F6C84D1B766DA3D /* Pods_ImageEditorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C63B7730CBEE77F11C02FF6 /* Pods_ImageEditorUITests.framework */; };
 		98EBC44523323F965506D127 /* Pods_ImageEditor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 901804362D46C883D1EFD843 /* Pods_ImageEditor.framework */; };
 		9DFF682B124F2EC6952E862E /* Pods_ImageEditorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE94E35E79C880ED7C18BE9E /* Pods_ImageEditorTests.framework */; };
@@ -95,7 +95,7 @@
 		041EE47D22EAEEF600EE9670 /* ColorToolBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorToolBar.h; sourceTree = "<group>"; };
 		041EE47E22EAEEF600EE9670 /* ColorToolBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorToolBar.m; sourceTree = "<group>"; };
 		04971E0B22F9564D00CC6B1A /* ImageEditorBunder.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ImageEditorBunder.bundle; sourceTree = "<group>"; };
-		049BC2EF22F83E6A00C0FE83 /* localImage_01@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "localImage_01@2x.jpg"; sourceTree = "<group>"; };
+		04971E0F22F95D5700CC6B1A /* localImage_01@2x.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "localImage_01@2x.jpeg"; sourceTree = "<group>"; };
 		2B72F278F6967036FDD48084 /* Pods-ImageEditorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageEditorUITests.release.xcconfig"; path = "Target Support Files/Pods-ImageEditorUITests/Pods-ImageEditorUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2C63B7730CBEE77F11C02FF6 /* Pods_ImageEditorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageEditorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		312840D1CED58BCB6BC50617 /* Pods-ImageEditorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageEditorTests.debug.xcconfig"; path = "Target Support Files/Pods-ImageEditorTests/Pods-ImageEditorTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -171,7 +171,7 @@
 				041EE42B22EA94D300EE9670 /* AppDelegate.m */,
 				041EE42D22EA94D300EE9670 /* ViewController.h */,
 				041EE42E22EA94D300EE9670 /* ViewController.m */,
-				049BC2EF22F83E6A00C0FE83 /* localImage_01@2x.jpg */,
+				04971E0F22F95D5700CC6B1A /* localImage_01@2x.jpeg */,
 				041EE43022EA94D300EE9670 /* Main.storyboard */,
 				041EE43322EA94D700EE9670 /* Assets.xcassets */,
 				041EE43522EA94D700EE9670 /* LaunchScreen.storyboard */,
@@ -417,8 +417,8 @@
 			files = (
 				041EE43722EA94D700EE9670 /* LaunchScreen.storyboard in Resources */,
 				041EE43422EA94D700EE9670 /* Assets.xcassets in Resources */,
-				049BC2F022F83E6A00C0FE83 /* localImage_01@2x.jpg in Resources */,
 				04971E0C22F9564D00CC6B1A /* ImageEditorBunder.bundle in Resources */,
+				04971E1022F95D5700CC6B1A /* localImage_01@2x.jpeg in Resources */,
 				041EE43222EA94D300EE9670 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
