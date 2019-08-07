@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "ImageEditor"
-  spec.version      = "1.0.0"
+  spec.version      = "1.0.2"
   spec.summary      = "图片编辑器."
 
   # This description is used to generate tags and improve search results.
@@ -77,7 +77,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/cctvbtv123456/ImageEditor.git", :tag => "1.0.0" }
+  spec.source       = { :git => "https://github.com/cctvbtv123456/ImageEditor.git", :tag => "1.0.2" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -112,7 +112,15 @@ Pod::Spec.new do |spec|
     spec.prefix_header_contents = prefix_header_contents
 
   spec.framework    = "UIKit"
-  spec.resources = "Resources/ImageEditorBunder.bundle"
+  spec.resource_bundle = {
+    'ImageEditorBunder' => ['*']
+  }
+
+
+
+
+
+
   spec.dependency   'Masonry', '~> 1.1.0'
 
   # spec.preserve_paths = "FilesToSave", "MoreFilesToSave"

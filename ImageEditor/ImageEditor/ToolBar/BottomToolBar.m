@@ -61,14 +61,14 @@
     NSMutableArray *editorItems = [NSMutableArray array];
     [editorItems addObject:self.drawButton];
     [editorItems addObject:self.textButton];
-    [editorItems mas_distributeViewsAlongAxis:MASAxisTypeHorizontal withFixedSpacing:28*kScale leadSpacing:48*kScale tailSpacing:48*kScale];
+    [editorItems mas_distributeViewsAlongAxis:MASAxisTypeHorizontal withFixedSpacing:28*ZP_kScale leadSpacing:48*ZP_kScale tailSpacing:48*ZP_kScale];
     [editorItems mas_makeConstraints:^(MASConstraintMaker *make) {
         if (@available(iOS 11.0, *)) {
-            make.bottom.equalTo(self.mas_safeAreaLayoutGuideBottom).offset(-20*kScale);
+            make.bottom.equalTo(self.mas_safeAreaLayoutGuideBottom).offset(-20*ZP_kScale);
         }else{
-            make.bottom.equalTo(@(-20*kScale));
+            make.bottom.equalTo(@(-20*ZP_kScale));
         }
-        make.height.equalTo(@(28*kScale));
+        make.height.equalTo(@(28*ZP_kScale));
     }];
     self.tempEditorItem = editorItems.firstObject;
 }
@@ -100,15 +100,15 @@
     
     [self.deleteBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.deleteContainerView);
-        make.bottom.equalTo(self.deleteDescBtn.mas_top).offset(-12*kScale);
+        make.bottom.equalTo(self.deleteDescBtn.mas_top).offset(-12*ZP_kScale);
     }];
     
     [self.deleteDescBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.deleteBtn);
         if (@available(iOS 11.0, *)) {
-            make.bottom.equalTo(self.mas_safeAreaLayoutGuideBottom).offset(-20*kScale);
+            make.bottom.equalTo(self.mas_safeAreaLayoutGuideBottom).offset(-20*ZP_kScale);
         } else {
-            make.bottom.equalTo(@(-20*kScale));
+            make.bottom.equalTo(@(-20*ZP_kScale));
         }
     }];
 }
@@ -161,9 +161,9 @@
             self.transform = CGAffineTransformIdentity;
         }else{
             if (self.type == BottomToolTypeEditor) {
-                self.transform = CGAffineTransformMakeTranslation(0, BottomToolBarHeight);
+                self.transform = CGAffineTransformMakeTranslation(0, ZP_BottomToolBarHeight);
             }else{
-                self.transform = CGAffineTransformMakeTranslation(0, BottomToolDeleteBarHeight);
+                self.transform = CGAffineTransformMakeTranslation(0, ZP_BottomToolDeleteBarHeight);
             }
         }
     }];

@@ -9,28 +9,28 @@
 #ifndef ImageEditorHeader_h
 #define ImageEditorHeader_h
 
-#define Screen_W                [UIScreen mainScreen].bounds.size.width
-#define kScale                  Screen_W/375.0
-#define Screen_H                [UIScreen mainScreen].bounds.size.height
-#define kStatusBarHeight [[UIApplication sharedApplication] statusBarFrame].size.height
-#define kNavBarHeight 44.0
-#define kTabBarHeight ([[UIApplication sharedApplication] statusBarFrame].size.height>20?83:49)
-#define kTopHeight (kStatusBarHeight + kNavBarHeight)
+#define ZP_Screen_W                [UIScreen mainScreen].bounds.size.width
+#define ZP_kScale                  ZP_Screen_W/375.0
+#define ZP_Screen_H                [UIScreen mainScreen].bounds.size.height
+#define ZP_kStatusBarHeight [[UIApplication sharedApplication] statusBarFrame].size.height
+#define ZP_kNavBarHeight 44.0
+#define ZP_kTabBarHeight ([[UIApplication sharedApplication] statusBarFrame].size.height>20?83:49)
+#define ZP_kTopHeight (ZP_kStatusBarHeight + ZP_kNavBarHeight)
 
-#define TopToolBarHeight             80*kScale
-#define BottomToolBarHeight          120*kScale
-#define BottomToolDeleteBarHeight    80*kScale
-#define TextColorToolBarHeight 48*kScale
-#define DrawColorToolBarHeight 50*kScale
+#define ZP_TopToolBarHeight             80*ZP_kScale
+#define ZP_BottomToolBarHeight          120*ZP_kScale
+#define ZP_BottomToolDeleteBarHeight    80*ZP_kScale
+#define ZP_TextColorToolBarHeight 48*ZP_kScale
+#define ZP_DrawColorToolBarHeight 50*ZP_kScale
 
 
 #define LAZY_LOAD(object, assignment) (object = object ?: assignment)
-#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+#define ZP_UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 
 /** 字体 */
-#define Font_Bold(font)         [UIFont fontWithName:@"PingFangSC-Medium" size:font]?[UIFont fontWithName:@"PingFangSC-Medium" size:font]:[UIFont systemFontOfSize:font]
-#define Font_Medium(font)       [UIFont fontWithName:@"PingFangSC-Medium" size:font]?[UIFont fontWithName:@"PingFangSC-Regular" size:font]:[UIFont systemFontOfSize:font]
-#define Font_Regular(font)      [UIFont fontWithName:@"PingFangSC-Regular" size:font]?[UIFont fontWithName:@"PingFangSC-Light" size:font]:[UIFont systemFontOfSize:font]
+#define ZP_Font_Bold(font)         [UIFont fontWithName:@"PingFangSC-Medium" size:font]?[UIFont fontWithName:@"PingFangSC-Medium" size:font]:[UIFont systemFontOfSize:font]
+#define ZP_Font_Medium(font)       [UIFont fontWithName:@"PingFangSC-Medium" size:font]?[UIFont fontWithName:@"PingFangSC-Regular" size:font]:[UIFont systemFontOfSize:font]
+#define ZP_Font_Regular(font)      [UIFont fontWithName:@"PingFangSC-Regular" size:font]?[UIFont fontWithName:@"PingFangSC-Light" size:font]:[UIFont systemFontOfSize:font]
 
 #endif /* ImageEditorHeader_h */

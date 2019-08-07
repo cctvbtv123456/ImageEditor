@@ -49,7 +49,7 @@ static const NSInteger kTextMaxLimitNumber = 100;
         [self.editorVC.view addSubview:self.bottomToolBar];
         [self.bottomToolBar mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.bottom.right.equalTo(self.editorVC.view);
-            make.height.equalTo(@(BottomToolDeleteBarHeight));
+            make.height.equalTo(@(ZP_BottomToolDeleteBarHeight));
         }];
     }
     
@@ -152,8 +152,8 @@ static const NSInteger kTextMaxLimitNumber = 100;
 
     CGPoint center = self.editorVC.view.center;
     // 修正超长图文字的显示位置
-    if (CGRectGetHeight(self.editorVC.imageView.frame) > Screen_H) {
-        center.y = self.editorVC.scrollView.contentOffset.y + Screen_H *0.5;
+    if (CGRectGetHeight(self.editorVC.imageView.frame) > ZP_Screen_H) {
+        center.y = self.editorVC.scrollView.contentOffset.y + ZP_Screen_H *0.5;
     }
 
     texItem.delegate = self;
@@ -296,7 +296,7 @@ static const NSInteger kTextMaxLimitNumber = 100;
         
         self.topToolBar = [[TopToolBar alloc] initWithType:TopToolBarTypeCancelAndDoneIcon];
         self.topToolBar.delegate = self;
-        self.topToolBar.frame = CGRectMake(0, 0, Screen_W, kTopHeight);
+        self.topToolBar.frame = CGRectMake(0, 0, ZP_Screen_W, ZP_kTopHeight);
         [self addSubview:self.topToolBar];
         
         self.inputView = [[UITextView alloc] init];
@@ -313,7 +313,7 @@ static const NSInteger kTextMaxLimitNumber = 100;
         
         self.colorToolBar = [[ColorToolBar alloc] initWithType:ColorToolBarTypeText];
         self.colorToolBar.delegate = self;
-        self.colorToolBar.frame = CGRectMake(0, 0, Screen_W, TextColorToolBarHeight);
+        self.colorToolBar.frame = CGRectMake(0, 0, ZP_Screen_W, ZP_TextColorToolBarHeight);
         
         self.inputView.inputAccessoryView = self.colorToolBar;
 //        self.inputView.inputAccessoryView.backgroundColor = [UIColor yellowColor];

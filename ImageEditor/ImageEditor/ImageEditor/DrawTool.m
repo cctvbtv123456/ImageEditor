@@ -95,8 +95,8 @@
         
         [self.colorToolBar mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.right.equalTo(self.editorVC.view);
-            make.height.equalTo(@(DrawColorToolBarHeight));
-            make.bottom.equalTo(self.editorVC.bottomToolBar.tempEditorItem.mas_top).offset(-15*kScale);
+            make.height.equalTo(@(ZP_DrawColorToolBarHeight));
+            make.bottom.equalTo(self.editorVC.bottomToolBar.tempEditorItem.mas_top).offset(-15*ZP_kScale);
         }];
     }
     

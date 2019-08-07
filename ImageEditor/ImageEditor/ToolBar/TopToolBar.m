@@ -46,7 +46,7 @@
         if (show) {
             self.transform = CGAffineTransformIdentity;
         }else{
-            self.transform = CGAffineTransformMakeTranslation(0, -TopToolBarHeight);
+            self.transform = CGAffineTransformMakeTranslation(0, -ZP_TopToolBarHeight);
         }
     } completion:^(BOOL finished) {
         self.show = show;
@@ -59,7 +59,7 @@
     [self.maskImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self);
     }];
-    self.backButton.titleLabel.font = Font_Medium(18*kScale);
+    self.backButton.titleLabel.font = ZP_Font_Medium(18*ZP_kScale);
     [self.backButton setTitle:@"取消" forState:UIControlStateNormal];
     [self.backButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self addSubview:self.backButton];
@@ -69,26 +69,26 @@
     [self addSubview:self.doneButton];
 
     [self.backButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.width.equalTo(@(56*kScale));
-        make.height.equalTo(@(32*kScale));
-        make.left.equalTo(@(20*kScale));
+        make.width.equalTo(@(56*ZP_kScale));
+        make.height.equalTo(@(32*ZP_kScale));
+        make.left.equalTo(@(20*ZP_kScale));
      
         if (@available(iOS 11.0, *)) {
-            make.top.equalTo(self.mas_safeAreaLayoutGuideTop).offset(30*kScale);
+            make.top.equalTo(self.mas_safeAreaLayoutGuideTop).offset(30*ZP_kScale);
         } else {
-            make.top.equalTo(@(30*kScale));
+            make.top.equalTo(@(30*ZP_kScale));
         }
     }];
     [self.doneButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.height.equalTo(@(32*kScale));
-        make.width.equalTo(@(56*kScale));
-        make.right.equalTo(@(-20*kScale));
+        make.height.equalTo(@(32*ZP_kScale));
+        make.width.equalTo(@(56*ZP_kScale));
+        make.right.equalTo(@(-20*ZP_kScale));
         make.centerY.equalTo(self.backButton);
     }];
 }
 
 - (void)configCancelAndDoneIconUI{
-    self.backButton.backgroundColor = UIColorFromRGB(0x5d7ef1);
+    self.backButton.backgroundColor = ZP_UIColorFromRGB(0x5d7ef1);
     [self.backButton setImage:[UIImage ps_imageNamed:@"btn_cancel"]
                      forState:UIControlStateNormal];
     [self.backButton setContentHorizontalAlignment:UIControlContentHorizontalAlignmentCenter];
@@ -99,16 +99,16 @@
     [self addSubview:self.doneButton];
     
     [self.backButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.width.equalTo(@(50*kScale));
-        make.height.equalTo(@(36*kScale));
-        make.left.equalTo(@(20*kScale));
+        make.width.equalTo(@(50*ZP_kScale));
+        make.height.equalTo(@(36*ZP_kScale));
+        make.left.equalTo(@(20*ZP_kScale));
         make.centerY.equalTo(self);
     }];
     
     [self.doneButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.height.equalTo(@(36*kScale));
-        make.width.equalTo(@(50*kScale));
-        make.right.equalTo(@(-20*kScale));
+        make.height.equalTo(@(36*ZP_kScale));
+        make.width.equalTo(@(50*ZP_kScale));
+        make.right.equalTo(@(-20*ZP_kScale));
         make.centerY.equalTo(self.backButton);
     }];
 }
@@ -123,8 +123,8 @@
 - (UIButton *)backButton {
     return LAZY_LOAD(_backButton, ({
         _backButton = [[UIButton alloc] init];
-        _backButton.titleLabel.font = Font_Regular(16*kScale);
-        [_backButton setFrame:CGRectMake(0, 0, 50*kScale, 36*kScale)];
+        _backButton.titleLabel.font = ZP_Font_Regular(16*ZP_kScale);
+        [_backButton setFrame:CGRectMake(0, 0, 50*ZP_kScale, 36*ZP_kScale)];
         _backButton.contentEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 0);
         [_backButton setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
         [_backButton addTarget:self action:@selector(buttonDidClickSender:) forControlEvents:UIControlEventTouchUpInside];
@@ -135,11 +135,11 @@
 - (UIButton *)doneButton {
     return LAZY_LOAD(_doneButton, ({
         _doneButton = [[UIButton alloc] init];
-        _doneButton.backgroundColor = UIColorFromRGB(0x5d7ef1);
-        _doneButton.layer.cornerRadius = 5*kScale;
+        _doneButton.backgroundColor = ZP_UIColorFromRGB(0x5d7ef1);
+        _doneButton.layer.cornerRadius = 5*ZP_kScale;
         _doneButton.clipsToBounds = YES;
-        _doneButton.titleLabel.font = Font_Regular(16*kScale);
-        [_doneButton setFrame:CGRectMake(0, 0, 48*kScale, 36*kScale)];
+        _doneButton.titleLabel.font = ZP_Font_Regular(16*ZP_kScale);
+        [_doneButton setFrame:CGRectMake(0, 0, 48*ZP_kScale, 36*ZP_kScale)];
 //        _doneButton.contentEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 0);
 //        [_doneButton setContentHorizontalAlignment:UIControlContentHorizontalAlignmentRight];
         [_doneButton addTarget:self action:@selector(buttonDidClickSender:) forControlEvents:UIControlEventTouchUpInside];

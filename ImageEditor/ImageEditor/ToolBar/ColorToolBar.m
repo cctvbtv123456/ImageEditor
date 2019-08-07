@@ -7,7 +7,7 @@
 //
 
 
-#define kColorFullButtonSize CGSizeMake(26*kScale, 26*kScale)
+#define kColorFullButtonSize CGSizeMake(26*ZP_kScale, 26*ZP_kScale)
 
 #import "ColorToolBar.h"
 #import "ColorFullButton.h"
@@ -74,16 +74,16 @@
     
     [_changeBgColorBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self);
-        make.left.equalTo(@(17*kScale));
+        make.left.equalTo(@(17*ZP_kScale));
         make.width.equalTo(@(kColorFullButtonSize.width));
         make.height.equalTo(@(kColorFullButtonSize.height));
     }];
     
     [_colorFullBtnViews mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.changeBgColorBtn);
-        make.left.equalTo(self.changeBgColorBtn.mas_right).offset(20*kScale);
+        make.left.equalTo(self.changeBgColorBtn.mas_right).offset(20*ZP_kScale);
         make.height.equalTo(@(kColorFullButtonSize.height));
-        make.right.equalTo(@(-17*kScale));
+        make.right.equalTo(@(-17*ZP_kScale));
     }];
     
     [_colorFullBtnViews.subviews mas_distributeViewsAlongAxis:MASAxisTypeHorizontal
@@ -131,22 +131,22 @@
     [self addSubview:_bottomLineView];
     
     [self.unDoBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(@(-25*kScale));
-        make.bottom.equalTo(@(-30*kScale));
-        make.size.equalTo(@(23*kScale));
+        make.right.equalTo(@(-25*ZP_kScale));
+        make.bottom.equalTo(@(-30*ZP_kScale));
+        make.size.equalTo(@(23*ZP_kScale));
     }];
     
     [self.colorFullBtnViews mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(@(15*kScale));
+        make.left.equalTo(@(15*ZP_kScale));
         make.height.equalTo(@(kColorFullButtonSize.height));
-        make.right.equalTo(self.unDoBtn.mas_left).offset(-5*kScale);
+        make.right.equalTo(self.unDoBtn.mas_left).offset(-5*ZP_kScale);
         make.centerY.equalTo(self.unDoBtn);
     }];
     
     [self.colorFullBtnViews.subviews mas_distributeViewsAlongAxis:MASAxisTypeHorizontal
                                              withFixedItemLength:kColorFullButtonSize.width
-                                                     leadSpacing:15*kScale
-                                                     tailSpacing:15*kScale];
+                                                     leadSpacing:15*ZP_kScale
+                                                     tailSpacing:15*ZP_kScale];
     
     [self.colorFullBtnViews.subviews mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self.colorFullBtnViews);
@@ -154,10 +154,10 @@
     }];
     
     [_bottomLineView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(@(15*kScale));
-        make.right.equalTo(@(-15*kScale));
+        make.left.equalTo(@(15*ZP_kScale));
+        make.right.equalTo(@(-15*ZP_kScale));
         make.bottom.equalTo(self);
-        make.height.equalTo(@(0.5*kScale));
+        make.height.equalTo(@(0.5*ZP_kScale));
     }];
     
     // 设置默认选中颜色
@@ -244,8 +244,8 @@
         
         _blueBtn = [[ColorFullButton alloc] initWithFrame:
                        CGRectMake(0, 0, kColorFullButtonSize.width, kColorFullButtonSize.height)];
-        _blueBtn.radius = 8*kScale;
-        _blueBtn.color = UIColorFromRGB(0x8c06ff);
+        _blueBtn.radius = 8*ZP_kScale;
+        _blueBtn.color = ZP_UIColorFromRGB(0x8c06ff);
         _blueBtn;
     }));
 }
@@ -254,8 +254,8 @@
     return LAZY_LOAD(_lightBuleBtn, ({
         _lightBuleBtn = [[ColorFullButton alloc] initWithFrame:
                             CGRectMake(0, 0, kColorFullButtonSize.width, kColorFullButtonSize.height)];
-        _lightBuleBtn.radius = 8*kScale;
-        _lightBuleBtn.color = UIColorFromRGB(0x199bff);
+        _lightBuleBtn.radius = 8*ZP_kScale;
+        _lightBuleBtn.color = ZP_UIColorFromRGB(0x199bff);
         _lightBuleBtn;
     }));
 }
@@ -264,8 +264,8 @@
     return LAZY_LOAD(_greenBtn, ({
         _greenBtn = [[ColorFullButton alloc] initWithFrame:
                         CGRectMake(0, 0, kColorFullButtonSize.width, kColorFullButtonSize.height)];
-        _greenBtn.radius = 8*kScale;
-        _greenBtn.color = UIColorFromRGB(0x14e213);
+        _greenBtn.radius = 8*ZP_kScale;
+        _greenBtn.color = ZP_UIColorFromRGB(0x14e213);
         _greenBtn;
     }));
 }
@@ -274,8 +274,8 @@
     return LAZY_LOAD(_yellowBtn, ({
         _yellowBtn = [[ColorFullButton alloc] initWithFrame:
                          CGRectMake(0, 0, kColorFullButtonSize.width, kColorFullButtonSize.height)];
-        _yellowBtn.radius = 8*kScale;
-        _yellowBtn.color = UIColorFromRGB(0xfbf60f);
+        _yellowBtn.radius = 8*ZP_kScale;
+        _yellowBtn.color = ZP_UIColorFromRGB(0xfbf60f);
         _yellowBtn;
     }));
 }
@@ -284,8 +284,8 @@
     return LAZY_LOAD(_whiteBtn, ({
         _whiteBtn = [[ColorFullButton alloc] initWithFrame:
                         CGRectMake(0, 0, kColorFullButtonSize.width, kColorFullButtonSize.height)];
-        _whiteBtn.radius = 8*kScale;
-        _whiteBtn.color = UIColorFromRGB(0xf9f9f9);
+        _whiteBtn.radius = 8*ZP_kScale;
+        _whiteBtn.color = ZP_UIColorFromRGB(0xf9f9f9);
         _whiteBtn;
     }));
 }
@@ -294,8 +294,8 @@
     return LAZY_LOAD(_blackBtn, ({
         _blackBtn = [[ColorFullButton alloc] initWithFrame:
                         CGRectMake(0, 0, kColorFullButtonSize.width, kColorFullButtonSize.height)];
-        _blackBtn.radius = 8*kScale;
-        _blackBtn.color = UIColorFromRGB(0x26252a);
+        _blackBtn.radius = 8*ZP_kScale;
+        _blackBtn.color = ZP_UIColorFromRGB(0x26252a);
         _blackBtn;
     }));
 }
@@ -304,8 +304,8 @@
     return LAZY_LOAD(_redBtn, ({
         _redBtn = [[ColorFullButton alloc] initWithFrame:
                       CGRectMake(0, 0, kColorFullButtonSize.width, kColorFullButtonSize.height)];
-        _redBtn.radius = 8*kScale;
-        _redBtn.color = UIColorFromRGB(0xff1d12);
+        _redBtn.radius = 8*ZP_kScale;
+        _redBtn.color = ZP_UIColorFromRGB(0xff1d12);
         _redBtn;
     }));
 }

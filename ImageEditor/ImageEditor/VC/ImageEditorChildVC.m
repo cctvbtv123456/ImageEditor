@@ -99,11 +99,11 @@
     
     [self.topToolBar mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.right.equalTo(self.view);
-        make.height.equalTo(@(TopToolBarHeight));
+        make.height.equalTo(@(ZP_TopToolBarHeight));
     }];
     [self.bottomToolBar mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.bottom.right.equalTo(self.view);
-        make.height.equalTo(@(BottomToolBarHeight));
+        make.height.equalTo(@(ZP_BottomToolBarHeight));
     }];
     [self.scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view);
