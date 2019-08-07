@@ -203,7 +203,6 @@
 		041EE45C22EA94F500EE9670 /* ImageEditor */ = {
 			isa = PBXGroup;
 			children = (
-				041EE46622EAA09600EE9670 /* ImageEditorHeader.h */,
 				04971E0A22F9562B00CC6B1A /* Resources */,
 				D0730E6222F4085500E883D8 /* Utilts */,
 				D0730E6122F4067F00E883D8 /* VC */,
@@ -247,6 +246,7 @@
 		D0730E5F22F405FB00E883D8 /* ImageEditor */ = {
 			isa = PBXGroup;
 			children = (
+				041EE46622EAA09600EE9670 /* ImageEditorHeader.h */,
 				041EE47A22EAE79F00EE9670 /* DrawTool.h */,
 				041EE47B22EAE79F00EE9670 /* DrawTool.m */,
 				D0730E6A22F6770D00E883D8 /* TextItem.h */,
